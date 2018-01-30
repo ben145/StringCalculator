@@ -34,4 +34,28 @@ class StringCalculatorTest {
         result = s1.Add(testString);
         assertEquals(-1, result);
     }
+
+    @org.junit.jupiter.api.Test
+    void addTestTwoNumbers() {
+        StringCalculator s2 = new StringCalculatorImpl();
+        String testString = "0,0";
+        int result = s2.Add(testString);
+        assertEquals(0, result);
+
+        testString = "4,5";
+        result = s2.Add(testString);
+        assertEquals(9, result);
+
+        testString = "1,-1";
+        result = s2.Add(testString);
+        assertEquals(0, result);
+
+        testString = "10,0";
+        result = s2.Add(testString);
+        assertEquals(10, result);
+
+        testString = "6,-7";
+        result = s2.Add(testString);
+        assertEquals(-1, result);
+    }
 }
