@@ -58,4 +58,32 @@ class StringCalculatorTest {
         result = s2.Add(testString);
         assertEquals(-1, result);
     }
+
+    @org.junit.jupiter.api.Test
+    void addTestMultipleNumbers() {
+        StringCalculator sM = new StringCalculatorImpl();
+        String testString = "0,0,0";
+        int result = sM.Add(testString);
+        assertEquals(0, result);
+
+        testString = "-1,6,-5";
+        result = sM.Add(testString);
+        assertEquals(0, result);
+
+        testString = "0,1,0";
+        result = sM.Add(testString);
+        assertEquals(1, result);
+
+        testString = "-1,0,1";
+        result = sM.Add(testString);
+        assertEquals(0, result);
+
+        testString = "-33,5,17";
+        result = sM.Add(testString);
+        assertEquals(-11, result);
+
+        testString = "-3,-5,-1";
+        result = sM.Add(testString);
+        assertEquals(-9, result);
+    }
 }
