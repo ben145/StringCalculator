@@ -8,10 +8,30 @@ import static org.junit.jupiter.api.Assertions.*;
 class StringCalculatorTest {
 
     @org.junit.jupiter.api.Test
-    void addTest() {
-        StringCalculator s1 = new StringCalculatorImpl();
+    void addTestEmptyString() {
+        StringCalculator sE = new StringCalculatorImpl();
         String testString = "";
-        int result = s1.Add(testString);
+        int result = sE.Add(testString);
         assertEquals(0, result);
+    }
+
+    @org.junit.jupiter.api.Test
+    void addTestOneNumber() {
+        StringCalculator s1 = new StringCalculatorImpl();
+        String testString = "1";
+        int result = s1.Add(testString);
+        assertEquals(1, result);
+
+        testString = "387";
+        result = s1.Add(testString);
+        assertEquals(387, result);
+
+        testString = "0";
+        result = s1.Add(testString);
+        assertEquals(0, result);
+
+        testString = "-1";
+        result = s1.Add(testString);
+        assertEquals(-1, result);
     }
 }
