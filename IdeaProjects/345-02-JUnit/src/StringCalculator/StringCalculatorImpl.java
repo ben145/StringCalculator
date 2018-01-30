@@ -17,14 +17,17 @@ public class StringCalculatorImpl implements StringCalculator {
         if (justOne)
             return Integer.parseInt(numbers);
         else {
-            int commaIndex = 0;
+            int commaIndex = -1;
+            int sum = 0;
             for (int i = 0; i < numbers.length(); i++) {
-                if (numbers.charAt(i) == ',')
+                if (numbers.charAt(i) == ',') {
+                    sum += Integer.parseInt(numbers.substring(commaIndex + 1, i));
                     commaIndex = i;
+                }
+                else if (i == numbers.length() - 1)
+                    sum += Integer.parseInt(numbers.substring(commaIndex + 1, numbers.length()));
             }
-            int s1 = Integer.parseInt(numbers.substring(0, commaIndex));
-            int s2 = Integer.parseInt(numbers.substring(commaIndex+1, numbers.length()));
-            return s1 + s2;
+            return sum;
         }
     }
 }
