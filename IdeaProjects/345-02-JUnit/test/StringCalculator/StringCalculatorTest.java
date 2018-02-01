@@ -33,6 +33,10 @@ class StringCalculatorTest {
         testString = "-1";
         result = s1.Add(testString);
         assertEquals(-1, result);
+
+        testString = "-1234";
+        result = s1.Add(testString);
+        assertEquals(-1234,result);
     }
 
     @org.junit.jupiter.api.Test
