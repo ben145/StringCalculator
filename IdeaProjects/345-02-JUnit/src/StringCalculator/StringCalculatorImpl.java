@@ -11,7 +11,7 @@ public class StringCalculatorImpl implements StringCalculator {
             return 0;
         boolean justOne = true;
         for (int i = 0; i < numbers.length(); i++) {
-            if (numbers.charAt(i) == ',')
+            if (numbers.charAt(i) == ',' || numbers.charAt(i) == '\n')
                 justOne = false;
         }
         if (justOne)
@@ -20,7 +20,7 @@ public class StringCalculatorImpl implements StringCalculator {
             int commaIndex = -1;
             int sum = 0;
             for (int i = 0; i < numbers.length(); i++) {
-                if (numbers.charAt(i) == ',') {
+                if (numbers.charAt(i) == ',' || numbers.charAt(i) == '\n') {
                     sum += Integer.parseInt(numbers.substring(commaIndex + 1, i));
                     commaIndex = i;
                 }
