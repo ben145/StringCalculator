@@ -86,4 +86,9 @@ class StringCalculatorTest {
         result = sM.Add(testString);
         assertEquals(-7, result);
     }
+
+    @org.junit.jupiter.api.Test
+    void addTestDelimiters() {
+        assertEquals(4, 5);
+    }
 }
