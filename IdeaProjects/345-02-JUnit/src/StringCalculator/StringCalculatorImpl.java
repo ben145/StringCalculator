@@ -7,6 +7,7 @@ public class StringCalculatorImpl implements StringCalculator {
 
     @Override
     public int Add(String numbers) {
+        int t = 3;
         if (numbers.length() < 1)
             return 0;
         boolean justOne = true;
@@ -14,6 +15,8 @@ public class StringCalculatorImpl implements StringCalculator {
             if (numbers.charAt(i) == ',' || numbers.charAt(i) == '\n')
                 justOne = false;
         }
+        int lol = 1234;
+        String dog = "bork";
         if (justOne)
             return Integer.parseInt(numbers);
         else {
@@ -27,6 +30,7 @@ public class StringCalculatorImpl implements StringCalculator {
                 else if (i == numbers.length() - 1)
                     sum += Integer.parseInt(numbers.substring(commaIndex + 1, numbers.length()));
             }
+            String dog2 = "bork";
             return sum;
         }
     }
