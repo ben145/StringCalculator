@@ -38,7 +38,7 @@
 .idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/dictionaries
-*.iml
+
 
 # Sensitive or high-churn files:
 .idea/**/dataSources/
@@ -118,4 +118,16 @@ fabric.properties
 .Spotlight-V100
 .Trashes
 ehthumbs.db
+
+### Intellij Patch ###
+# Comment Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-215987721
+
+ *.iml
+ modules.xml
+ .idea/misc.xml
+ *.ipr
+
+# Sonarlint plugin
+.idea/sonarlint
+Thumbs.db
 Thumbs.db
